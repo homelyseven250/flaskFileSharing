@@ -54,5 +54,5 @@ def upload():
                 abort(409)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
             return hashlib.sha256(open(app.config['UPLOAD_FOLDER'] + file.filename, 'rb').read()).hexdigest() + '''
-            <a href="download"> Go to the download page!</a>'''
+            <a href="download"> Go to the download page - make sure to copy your unique hash.</a>'''
     abort(418)
