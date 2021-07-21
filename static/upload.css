@@ -1,0 +1,94 @@
+/* css for a file upload */
+body{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Lucida", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #fff;
+}
+
+
+form {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+#submitButton {
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+    width: 100%;
+    cursor: pointer;
+    background-color: limegreen;
+    /* a nice looking border */
+    border: 1px solid #0f0;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+/* animate the submitButton smoothly */
+#submitButton:hover {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background-color: darkgreen;
+}
+
+/* un-animate the submitButton */
+#submitButton:not(:hover) {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background-color: limegreen;
+}
+
+
+
+
+#selectFileButton {
+    /* a button to select a file */
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+    width: 100%;
+    cursor: pointer;
+    background-color: blue;
+    /* a nice looking border */
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+
+
+}
+
+/* make the actual button look like a button */
+#selectFileButton:hover {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background-color: darkblue;
+
+}
