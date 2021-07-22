@@ -1,7 +1,8 @@
+
 /* css for a file upload */
 body{
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Lucida", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
+    font-family: 'Raleway', sans-serif;
     line-height: 1.42857143;
     color: #000;
     background-color: #fff;
@@ -18,16 +19,16 @@ form {
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 
-#submitButton {
+.submitButton {
     color: #fff;
     padding: 20px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: bold;
     margin: 20px 0;
-    width: 100%;
     cursor: pointer;
     background-color: limegreen;
     /* a nice looking border */
@@ -35,10 +36,13 @@ form {
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    /* Make the line height 20px */
+    line-height: 20px;
+    width: 150px;
 }
 
 /* animate the submitButton smoothly */
-#submitButton:hover {
+.submitButton:hover {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
@@ -48,7 +52,7 @@ form {
 }
 
 /* un-animate the submitButton */
-#submitButton:not(:hover) {
+.submitButton:not(:hover) {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
@@ -67,6 +71,7 @@ form {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: bold;
     margin: 20px 0;
@@ -90,5 +95,91 @@ form {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     background-color: darkblue;
+
+}
+
+/* make links look like clickable buttons */
+a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+    cursor: pointer;
+    background-color: blue;
+    /* a nice looking border */
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    /* fonts*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    /* Make the text centered */
+    text-align: center;
+    /* Paddings */
+    padding: 20px 20px;
+
+}   
+
+#linkInTextInput {
+    /* Make it invisible but still selectable */
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1;
+
+}
+
+#copyToClipboardButton {
+    /* a button to copy the link to the clipboard */
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: auto;
+    width: 250px;
+    cursor: pointer;
+    background-color: blue;
+    /* a nice looking border */
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    /* Make the line height 20px */
+    line-height: 20px;
+
+}
+
+.centered {
+    margin: 0 auto;
+    display: block;
+}
+
+.textInputs {
+    /* make the text inputs look like text inputs */
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #fff;
+    /* a nice black border */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    /* Make the line height 20px */
+    line-height: 20px;
+    /* Make the text inputs centered */
+    text-align: center;
+    /* Increase size of the font */
+    font-size: 20px;
+    
 
 }
