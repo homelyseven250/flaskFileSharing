@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/static/upload.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+  
+    <script>
+        function copyToClipboard(elementName) {
+            var textArea = document.getElementById(elementName);
+            textArea.select();
+            document.execCommand("copy");
+        }
+    </script>
+
+</head>
+
+<body>
+  <!--- A simple upload form -->
+  <form action="{{ url_for('generate') }}" method="post" enctype="multipart/form-data">
+    <label for="file_name">Enter the file name</label>
+    <input id="file_name" type="text" name="file_name" required class="textInputs">
+    <label for="password">Enter the file's password</label>
+    <input id="password" type="password" name="password" required class="textInputs">
+    <input id="submitButton" type="submit" value="Request">
+  </form>
+  <br>
+  {% if link %}
+    <input id="linkInTextInput" type="text" value="{{ link }}" readonly>
+    <button onclick="copyToClipboard('linkInTextInput')" id="copyToClipboardButton" class="centered">Copy Link</button>
+  {% endif %}
+
+
+</body>
+
+</html>
