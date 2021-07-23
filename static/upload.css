@@ -10,8 +10,11 @@ body{
 
 
 form {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    /* width: 100%;
+    height: 100%; */
+    justify-content: space-around;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -19,8 +22,8 @@ form {
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 
-.submitButton {
-    color: #fff;
+.button {
+    color: #000;
     padding: 20px 20px;
     text-align: center;
     text-decoration: none;
@@ -30,9 +33,9 @@ form {
     font-weight: bold;
     margin: 20px 0;
     cursor: pointer;
-    background-color: limegreen;
+    background-color: #fff;
     /* a nice looking border */
-    border: 1px solid #0f0;
+    border: 2px solid #66afe9;
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
@@ -42,32 +45,29 @@ form {
 }
 
 /* animate the submitButton smoothly */
-.submitButton:hover {
+.button:hover {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    background-color: darkgreen;
+    background-color: #66afe9;
+    color: #fff;
 }
 
 /* un-animate the submitButton */
-.submitButton:not(:hover) {
+.button:not(:hover) {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    background-color: limegreen;
+    background-color: #fff;
 }
 
-
-
-
-#selectFileButton {
-    /* a button to select a file */
-    color: #fff;
-    padding: 20px 20px;
+.slimButton {
+    color: #000;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -75,28 +75,41 @@ form {
     font-size: 16px;
     font-weight: bold;
     margin: 20px 0;
-    width: 100%;
     cursor: pointer;
-    background-color: blue;
+    background-color: #fff;
     /* a nice looking border */
-    border: 1px solid lightblue;
+    border: 2px solid #fff;
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
-
-
+    /* Make the line height 20px */
+    line-height: 20px;
 }
 
-/* make the actual button look like a button */
-#selectFileButton:hover {
+/* animate the submitButton smoothly */
+.slimButton:hover {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    background-color: darkblue;
-
+    border-color: #66afe9;
 }
+
+/* un-animate the submitButton */
+.slimButton:not(:hover) {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-color: #fff;
+}
+
+
+
+
+
 
 /* make links look like clickable buttons */
 a {
@@ -162,7 +175,7 @@ a {
     display: block;
 }
 
-.textInputs {
+.textInput {
     /* make the text inputs look like text inputs */
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
@@ -170,7 +183,7 @@ a {
     color: #000;
     background-color: #fff;
     /* a nice black border */
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
@@ -179,7 +192,53 @@ a {
     /* Make the text inputs centered */
     text-align: center;
     /* Increase size of the font */
-    font-size: 20px;
-    
+    font-size: 13px;
 
+}
+
+
+.textInput:focus {
+    outline: none;
+    border: 2px solid #66afe9;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    background-color: #fff;
+    color: #000;
+}
+
+.fileUpload::file-selector-button {
+    font-family: Raleway, sans-serif;
+    border: 2px solid #66afe9;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 20px 20px;
+}
+
+.fileUpload::file-selector-button:hover {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background-color: #66afe9;
+    color:#fff;
+
+}
+
+.fileUpload::file-selector-button:not(:hover) {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background-color: #fff;
+    color: #000;
+}
+
+.fileUpload{
+    font-family: Raleway, sans-serif;
 }

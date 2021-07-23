@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/upload.css" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- A form to take the name of the file to download and its password-->
-    <form action="download" method="post">
-        <label for="file_name">File to download:</label>
-        <input type="text" name="file_name" id="file_name" value="" class="textInputs">
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" value="" class="textInputs">
-        <input type="submit" value="Download" class="submitButton">
-    </form>
+    <nav>
+        <button class="slimButton" onclick="window.location='/upload'" type="button">Upload</button>
+        <button class="slimButton" onclick="window.location='/download'" type="button">Download</button>
+        <button class="slimButton" onclick="window.location='/generate'" type="button">Generate link</button>
+    </nav>
+    <main>
+        <!-- A form to take the name of the file to download and its password-->
+        <form action="download" method="post">
+            <div>
+                <label for="file_name">File to download:</label>
+                <input type="text" name="file_name" id="file_name" value="" class="textInput">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" value="" class="textInput">
+            </div>
+
+
+            <input type="submit" value="Download" class="button">
+        </form>
+    </main>
+
 </body>
 
 </html>
